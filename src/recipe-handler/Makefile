@@ -26,7 +26,7 @@ $(env): requirements.txt
 	python -m virtualenv -p python3 env
 	$(python) -m pip install -r requirements.txt
 
-copy_mini: /out/mini/
+copy_mini: out/mini/
 	mkdir -p ../verify/data/
 	cp out/mini/foodon-links.trig ../verify/data/
 	cp out/mini/usda-links.trig ../verify/data/
