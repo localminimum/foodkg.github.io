@@ -9,8 +9,8 @@ cd src/prep-scripts
 make
 make copy
 cd ../recipe-handler
-make
-make copy
+make mini
+make copy_mini
 cp -r out /food-kg-data
 cd ../verify
 make
