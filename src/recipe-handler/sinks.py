@@ -205,8 +205,10 @@ class RDFNanopubs(_Sink):
         for id in self.streams:
             yield "Starting stream: " + id
             stream = streams[id]
-
-            for object in tqdm.tqdm(stream):
+            
+            pbar = tqdm.tqdm(stream)
+            for object in pbar:
+                pbar.set_description("Processing %d" % len(d))
                 for quad in object.__publish__():
                     if self.cutoff and len(d) > self.cutoff:
                         with open(base_name + "-" + str(counter) + ext, "wb") as file:

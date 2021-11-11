@@ -9,7 +9,7 @@ mini: out/mini/
 
 out/iswc/: $(env) recipe.py data/recipe1m-ex-limited.json data/usda-pairs.csv data/foodon-pairs.csv | out
 	mkdir -p out/iswc/
-	$(python) recipe.py job iswc data/recipe1m-ex-limited.json data/usda-pairs.csv data/foodon-pairs.csv out/iswc/ --cutoff 99999999999999
+	$(python) recipe.py job iswc data/recipe1m-ex-limited.json data/usda-pairs.csv data/foodon-pairs.csv out/iswc/ --cutoff 22000000
 	touch out/iswc/
 
 out/mini/: $(env) recipe.py data/1k.json data/usda-pairs.csv data/foodon-pairs.csv | out

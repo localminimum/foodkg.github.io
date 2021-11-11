@@ -1,5 +1,6 @@
 #!/bin/bash
-wget http://data.csail.mit.edu/im2recipe/det_ingrs.json
+wget $RECIPE_LINK
+wget $INGRES_LINK
 tar xzf recipe1M_layers.tar.gz
 rm -rf recipe1M_layers.tar.gz
 mkdir src/prep-scripts/in

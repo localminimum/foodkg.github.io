@@ -13,3 +13,5 @@ out/
 int/
 report.txt
 *.tar.gz
+det_ingrs.json
+.vscode
